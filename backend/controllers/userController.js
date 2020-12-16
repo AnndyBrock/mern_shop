@@ -136,7 +136,7 @@ const getUserById = expressAsyncHandler(async (req, res) => {
     if (user) {
         res.json({user})
     } else {
-        res.status(404)
+        res.status(404);
         throw new Error('User not found')
     }
 })
@@ -162,7 +162,7 @@ const updateUser = expressAsyncHandler(async (req, res) => {
             isAdmin: updatedUser.isAdmin,
         })
     } else {
-        res.status(404)
+        res.status(404);
         throw new Error('User not found')
     }
 })
